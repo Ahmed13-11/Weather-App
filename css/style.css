@@ -1,0 +1,8 @@
+/* .test:first-child {
+    color:red;
+    background-color: blue;
+} */
+
+.parent ~ p {
+    color: blue;
+}
