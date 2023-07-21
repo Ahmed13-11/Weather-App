@@ -1,60 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Hmoda -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body>
-  <div class="w-75 shadow-lg m-auto my-5 p-5">
-  <h1 class="text-center fw-bolder text-uppercase">CRUD SYSTEM</h1>
-  <label>productName:</label>
-  <input type="text" id="pName" class="form-control mb-3"/>
-  <label>productCategory:</label>
-  <input type="text" id="pCat" class="form-control mb-3"/>
-  <label>productPrice:</label>
-  <input type="number" id="pPrice" class="form-control mb-3" />
-  <label>productDescription:</label>
-  <textarea id="desc" class="form-control mb-3">
-  </textarea>
-  
-  <button class="btn btn-primary" onclick="greatProduct()">Add product</button>
-  <button class="btn btn-danger">Reset</button>
+<body style="background-color: antiquewhite;">
+  <div class="container my-5">
+    <div class="head text-center">
+      <h1>BookMarker</h1>
+      <hr style="border-top: 3px dashed;">
+      <h2>BookMark your favorite sites</h2>
+    </div>
+    <label for="bookName"><i class="fas fa-book"></i>  Site Name :</label>
+    <input type="text" id="bookName" class="form-control mb-3">
+    <label for="WebSite-Url"><i class="fas fa-link"></i>  Site URL :</label>
+    <input type="text" id="WebSite-Url" class="form-control mb-3">
+    <div class="butt d-flex justify-content-center flex-row">
+      <button class="btn btn-danger" id="but">Submit</button>
+    </div>
+    <hr style="border-top: 3px dashed;">
   </div>
-  <input type="text" placeholder="search" id="prosearch" onkeyup="productsearch()" class="form-control w-50 m-auto"/>
-  
-  <div class="w-75 m-auto my-5">
-      <table class="table">
-          <thead>
-            
-                  <th >index</th>
-                  <th >name</th>
-                  <th >Category</th>
-                  <th >Price</th>
-                  <th >Description</th>
-                  <th >update</th>
-                  <th >delete</th>
-          </thead>
-          <tbody  id="Imp">
-              <tr>
-              <td>1</td>
-              <td>samsunge</td>
-              <td>laptop</td>
-              <td>20000</td>
-              <td>oiytrewguio</td>
-              <td><button class="btn btn-outline-warning"><i class="fa-solid fa-edit"></i></button></td>
-              <td><button class="btn btn-outline-danger><i class="fa-solid fa-trash"></i></button></td>
-              </tr>
-          </tbody>
-      </table>
-  </div>  
-
-
-
-
-
-  <!-- sadsdsadsadsa -->
+  <div class="container">
+    <table class="table bg-white m-auto w-100 text-center">
+      <thead>
+        <tr>
+          <th>ID (Number)</th>
+          <th>WebSite Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <tr class="">
+          <td>1</td>
+          <td>Google</td>
+          <td><a href="https://www.google.com/" id="websiteLink" target="_blank"><button class="btn btn-info"><i class="fas fa-eye"></i>  Visit</button></a></td>
+          <td><button class="btn btn-info" id="butDelete"><i class="fas fa-trash"></i>  Delete</button></td>
+        </tr>
+        <tr class="">
+      </tbody>
+    </table>
+  </div>
   <script src="./Js/main.js"></script>
 </body>
 </html>
