@@ -39,7 +39,7 @@ function addWebsit() {
         display();
     }
     else {
-        alert("غلط يا عم الجاموسة")
+        alert("Invalid")
     }
 }
 
