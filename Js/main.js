@@ -30,6 +30,12 @@ buttonSubmit.onclick = addWebsit;
 
 function addWebsit() {
     if(validationUrl()===true) {
+        for(var i = 0 ; i<websiteList.length ; i++) {
+            if(websiteList[i].webName === websitName.value) {
+                swal("Oops...", "This website name already exists in the bookmarks!", "error");
+                return;
+            }
+        }
         var websiteObj = {
             webName : websitName.value,
             webUrl : websitUrl.value
@@ -37,16 +43,23 @@ function addWebsit() {
         websiteList.push(websiteObj);
         localStorage.setItem('webList', JSON.stringify(websiteList));
         display();
+        reset();
+        swal("Good job!", "Your Url and Name are Correct!", "success");
     }
     else {
-        alert("Invalid")
-    }
+        swal("Oops...", "Your Url is InCorrect!\nYour Url should like that https://www.example.com", "error");
+}
 }
 
 function deleteWebsit(index) {
     websiteList.splice(index, 1);
     localStorage.setItem('webList', JSON.stringify(websiteList));
     display();
+}
+
+function reset() {
+    websitName.value="";
+    websitUrl.value="";
 }
 
 function validationUrl() {
@@ -59,3 +72,4 @@ function validationUrl() {
         return false;
     }
 }
+

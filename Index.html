@@ -3,39 +3,40 @@
 <head>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/bootstrap.bundle.min.js">
+    <script src="./js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body style="background-color: antiquewhite;">
-  <div class="container my-5">
-    <div class="head text-center">
-      <h1>BookMarker</h1>
-      <hr style="border-top: 3px dashed;">
-      <h2>BookMark your favorite sites</h2>
+    <div class="container my-5">
+      <div class="heading text-center">
+        <h1>BookMarker</h1>
+        <hr>
+        <h2>BookMark your favorite sites</h2>
+      </div>
+      <label for="bookName"><i class="fas fa-book"></i>  Site Name :</label>
+      <input type="text" id="bookName" class="form-control mb-3">
+      <label for="WebSite-Url"><i class="fas fa-link"></i>  Site URL :</label>
+      <input type="text" id="WebSite-Url" class="form-control mb-3">
+      <div class="butt d-flex justify-content-center flex-row">
+        <button class="btn btn-danger" id="but">Submit</button>
+      </div>
+      <hr>
     </div>
-    <label for="bookName"><i class="fas fa-book"></i>  Site Name :</label>
-    <input type="text" id="bookName" class="form-control mb-3">
-    <label for="WebSite-Url"><i class="fas fa-link"></i>  Site URL :</label>
-    <input type="text" id="WebSite-Url" class="form-control mb-3">
-    <div class="butt d-flex justify-content-center flex-row">
-      <button class="btn btn-danger" id="but">Submit</button>
+    <div class="container">
+      <table class="table bg-white m-auto w-100 text-center">
+        <thead>
+          <tr>
+            <th>ID (Number)</th>
+            <th>WebSite Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
     </div>
-    <hr style="border-top: 3px dashed;">
-  </div>
-  <div class="container">
-    <table class="table bg-white m-auto w-100 text-center">
-      <thead>
-        <tr>
-          <th>ID (Number)</th>
-          <th>WebSite Name</th>
-          <th>Visit</th>
-          <th>Delete</th>
-        </tr>
-      </thead>
-      <tbody id="tableBody">
-      </tbody>
-    </table>
-  </div>
   <script src="./Js/main.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
