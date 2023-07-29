@@ -6,37 +6,24 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body style="background-color: antiquewhite;">
-    <div class="container my-5">
-      <div class="heading text-center">
-        <h1>BookMarker</h1>
-        <hr>
-        <h2>BookMark your favorite sites</h2>
+<body>
+  <div class="parent d-flex flex-row justify-content-center vh-100" style="background-color:gray;">
+    <div class="child w-50">
+      <div class="logIn my-5 text-center border-1 shadow p-4" style="background-color:antiquewhite;">
+        <form action="" id="form">
+          <h1 class="my-3">Smart Login System</h1>
+          <input type="email" value="" name="email" id="email" class="form-control my-2" placeholder="Enter Your Email" required>
+          <input type="password" value="" name="password" id="password" class="form-control my-2" placeholder="Enter Your password" required>
+          <div id="invalid">
+            <p></p>
+          </div>
+          <button id="butt" type="submit" class="btn btn-danger form-control my-2" style="background-color: #ff0000;">Login</button>
+          <p>Don’t have an account? <a href="./html/signUp.html">Sign Up</a></p>
+        </form>
       </div>
-      <label for="bookName"><i class="fas fa-book"></i>  Site Name :</label>
-      <input type="text" id="bookName" class="form-control mb-3">
-      <label for="WebSite-Url"><i class="fas fa-link"></i>  Site URL :</label>
-      <input type="text" id="WebSite-Url" class="form-control mb-3">
-      <div class="butt d-flex justify-content-center flex-row">
-        <button class="btn btn-danger" id="but">Submit</button>
-      </div>
-      <hr>
     </div>
-    <div class="container">
-      <table class="table bg-white m-auto w-100 text-center">
-        <thead>
-          <tr>
-            <th>ID (Number)</th>
-            <th>WebSite Name</th>
-            <th>Visit</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody id="tableBody">
-        </tbody>
-      </table>
-    </div>
-  <script src="./Js/main.js"></script>
+  </div>  
+  <script src="./Js/SignIn.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
