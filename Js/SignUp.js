@@ -15,7 +15,7 @@ btn.addEventListener('submit', function(e) {
     if(validateEmail() && validatePassword() && checkEmailredandancy()){
         addMembers();
         reset();
-        window.location.href = "/SignIn.html";
+        window.location.href = "/index.html";
     }
     else if (validateEmail() && validatePassword()) {
         swal("Oops...", "Your Email is exist", "error");
@@ -51,7 +51,7 @@ function validateEmail() {
     }
 }
 function validatePassword() {
-    return passMember.value.length > 8 ? true : false;
+    return passMember.value.length >= 8 ? true : false;
 }
 function checkEmailredandancy(){
     var flag=true;
