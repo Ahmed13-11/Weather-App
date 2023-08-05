@@ -1,31 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Weather App</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;1,100;1,300;1,400;1,500;1,700&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-  <div class="parent d-flex flex-row justify-content-center vh-100" style="background-color:gray;">
-    <div class="child w-50">
-      <div class="logIn my-5 text-center border-1 shadow p-4" style="background-color:antiquewhite;">
-        <form action="" id="form">
-          <h1 class="my-3">Smart Login System</h1>
-          <input type="email" value="" name="email" id="email" class="form-control my-2" placeholder="Enter Your Email" required>
-          <input type="password" value="" name="password" id="password" class="form-control my-2" placeholder="Enter Your password" required>
-          <div id="invalid">
-            <p></p>
+  <div class="header vh-100">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <div class="contain w-75 d-flex flex-row justify-content-between m-auto">
+          <a class="navbar-brand text-white fs-3 fw-bold" href="#">Weather</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse d-flex flex-row justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav w-50 d-flex flex-row justify-content-between">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">News</a>
+              <a class="nav-link" href="#">Live Cameras</a>
+              <a class="nav-link" href="#">Photoes</a>
+              <a class="nav-link" href="#">Contact</a>
+            </div>
           </div>
-          <button id="butt" type="submit" class="btn btn-danger form-control my-2" style="background-color: #ff0000;">Login</button>
-          <p>Don’t have an account? <a href="./html/signUp.html">Sign Up</a></p>
-        </form>
+      </div>
+      </div>
+    </nav>
+    <div class="container py-3">
+      <div class="total">
+        <div class="input-group mb-5">
+          <input type="search" id="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+          <button type="button" class="btn btn-danger" id="btnSearch">search</button>
+        </div>
+        <div id="parent">
+          <div class="row bg-light shadow rounded-3 bg-opacity-25 bg-black text-light border">
+            <div class="icon col-2 d-flex justify-content-center align-items-center">
+              <img src="https://png.pngtree.com/png-vector/20230414/ourmid/pngtree-sun-orange-three-dimensional-illustration-png-image_6694186.png" alt="img" width="100" height="100">
+            </div>
+            <div class="exprssion col-4 d-flex flex-column justify-content-center align-items-center shadow" id="expression">
+              <p id="demo">Today</p>
+              <p>2023-08-05 17:10</p>
+              <h1>Cairo</h1>
+              <p>Temperature : 17 &deg;C</p>
+              <p>clear sky</p>
+              <p>Humidity : 70%</p>
+              <p>Wind Speed : 20 km/h</p>
+              <p>Wind dir : WSW</p>
+            </div>
+            <div class="nextDay col-3 d-flex flex-column justify-content-center align-items-center"  id="expression">
+              <div class="nextDay-body ">
+                <p>Sec-Day</p>
+                <h5>Cairo</h5>
+                <h3>Max : 15&deg;C</h3>
+                <h3>Min : 12&deg;C</h3>
+                <p>Light rain</p>
+              </div>
+            </div>
+            <div class="nextDay col-3 d-flex flex-column justify-content-center align-items-center"  id="expression">
+              <div class="nextDay-body">
+                <p>Thi-Day</p>
+                <h5>Cairo</h5>
+                <h3>Max : 15&deg;C</h3>
+                <h3>Min : 12&deg;C</h3>
+                <p>Light rain</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>  
-  <script src="./Js/SignIn.js"></script>
+    <div class="contain-footer bg-opacity-25 fixed-bottom bg-black">
+        <div class="row w-75 m-auto text-center">
+          <div class="input-group my-3">
+            <input type="search" class="form-control rounded" placeholder="Enter your Email to SubScribe" aria-label="Search" aria-describedby="search-addon" />
+            <button type="button" class="btn btn-danger">SubScribe</button>
+          </div>
+          <P class="text-white">Copyright 2014 Company name. Designed by Themezy. All rights reserved</P>
+        </div>
+    </div>
+  </div>
+  <script src="./Js/main.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
 
-<!-- sdas -->

@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-image: url(../imges/3.jpg);
+    background-size: 140% 140%;
+    animation: bganimation 150s infinite alternate;
+}
+
+@keyframes bganimation {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 20% 50%;
+    }
+    100%{
+        background-position: 40% 50%;
+    }
+}
+.navbar-brand {
+    font-family: 'Alegreya Sans', sans-serif;
+}
+.navbar, .navbar-nav .nav-link {
+    color: white;
+}
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    transition: background-color 0.2s;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+.exprssion {
+    padding: 20px;
+}
+
+.input-group.my-3 {
+max-width: 500px;
+margin: 0 auto;
+}
+
+#expression {
+    text-align: center;
+}
+
